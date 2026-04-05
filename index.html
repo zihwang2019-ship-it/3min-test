@@ -1,7 +1,8 @@
-<!DOCTYPE html>
-<!-- saved from url=(0050)file:///C:/Users/rchle/Downloads/aplus-form_6.html -->
-<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>3分钟测你能申到什么学校 | APlus Consulting</title>
 <style>
@@ -81,14 +82,14 @@ textarea{resize:vertical;min-height:80px;line-height:1.6;}
       <div class="sl">第 1 步 / 共 6 步</div>
       <div class="st">你在申请哪个方向？</div>
       <div class="rg" id="stage-group">
-        <label class="ro" onclick="pickStage(this,&#39;美本&#39;)"><div class="dot"></div>美本（本科申请）<span class="tag tag-us">美国</span></label>
-        <label class="ro" onclick="pickStage(this,&#39;美本转学&#39;)"><div class="dot"></div>美本转学（Transfer）<span class="tag tag-us">美国</span></label>
-        <label class="ro" onclick="pickStage(this,&#39;美研&#39;)"><div class="dot"></div>美研（研究生申请）<span class="tag tag-us">美国</span></label>
-        <label class="ro" onclick="pickStage(this,&#39;英本&#39;)"><div class="dot"></div>英本（本科申请）<span class="tag tag-uk">英国</span></label>
-        <label class="ro" onclick="pickStage(this,&#39;英研&#39;)"><div class="dot"></div>英研（研究生申请）<span class="tag tag-uk">英国</span></label>
-        <label class="ro" onclick="pickStage(this,&#39;港本&#39;)"><div class="dot"></div>港本（本科申请）<span class="tag tag-hk">香港</span></label>
-        <label class="ro" onclick="pickStage(this,&#39;港研&#39;)"><div class="dot"></div>港研（研究生申请）<span class="tag tag-hk">香港</span></label>
-        <label class="ro" onclick="pickStage(this,&#39;还没确定&#39;)"><div class="dot"></div>还没确定，想先了解</label>
+        <label class="ro" onclick="pickStage(this,'美本')"><div class="dot"></div>美本（本科申请）<span class="tag tag-us">美国</span></label>
+        <label class="ro" onclick="pickStage(this,'美本转学')"><div class="dot"></div>美本转学（Transfer）<span class="tag tag-us">美国</span></label>
+        <label class="ro" onclick="pickStage(this,'美研')"><div class="dot"></div>美研（研究生申请）<span class="tag tag-us">美国</span></label>
+        <label class="ro" onclick="pickStage(this,'英本')"><div class="dot"></div>英本（本科申请）<span class="tag tag-uk">英国</span></label>
+        <label class="ro" onclick="pickStage(this,'英研')"><div class="dot"></div>英研（研究生申请）<span class="tag tag-uk">英国</span></label>
+        <label class="ro" onclick="pickStage(this,'港本')"><div class="dot"></div>港本（本科申请）<span class="tag tag-hk">香港</span></label>
+        <label class="ro" onclick="pickStage(this,'港研')"><div class="dot"></div>港研（研究生申请）<span class="tag tag-hk">香港</span></label>
+        <label class="ro" onclick="pickStage(this,'还没确定')"><div class="dot"></div>还没确定，想先了解</label>
       </div>
       <div class="nr"><span></span><button class="bn" onclick="goNext(1)">下一步 →</button></div>
     </div>
@@ -105,10 +106,10 @@ textarea{resize:vertical;min-height:80px;line-height:1.6;}
         <div class="field">
           <label>当前阶段<span class="rm">*</span></label>
           <div class="rg fw-row" style="margin-top:4px;">
-            <label class="ro g-ustage" onclick="gp(this,&#39;g-ustage&#39;)"><div class="dot"></div>高中在读</label>
-            <label class="ro g-ustage" onclick="gp(this,&#39;g-ustage&#39;)"><div class="dot"></div>大一</label>
-            <label class="ro g-ustage" onclick="gp(this,&#39;g-ustage&#39;)"><div class="dot"></div>大二</label>
-            <label class="ro g-ustage" onclick="gp(this,&#39;g-ustage&#39;)"><div class="dot"></div>已毕业</label>
+            <label class="ro g-ustage" onclick="gp(this,'g-ustage')"><div class="dot"></div>高中在读</label>
+            <label class="ro g-ustage" onclick="gp(this,'g-ustage')"><div class="dot"></div>大一</label>
+            <label class="ro g-ustage" onclick="gp(this,'g-ustage')"><div class="dot"></div>大二</label>
+            <label class="ro g-ustage" onclick="gp(this,'g-ustage')"><div class="dot"></div>已毕业</label>
           </div>
         </div>
         <div class="field"><label>在读学校</label><input type="text" id="u-school" placeholder="例：上海中学 / 北京大学"></div>
@@ -143,8 +144,8 @@ textarea{resize:vertical;min-height:80px;line-height:1.6;}
         <div class="field"><label>GRE / GMAT</label><input type="text" id="ug-gre" placeholder="例：330+170 / 710 / 备考中 / N/A"></div>
         <div class="field"><label>是否转专业申请</label>
           <div class="rg fw-row" style="margin-top:4px;">
-            <label class="ro g-uschg" onclick="gp(this,&#39;g-uschg&#39;)"><div class="dot"></div>是</label>
-            <label class="ro g-uschg" onclick="gp(this,&#39;g-uschg&#39;)"><div class="dot"></div>否</label>
+            <label class="ro g-uschg" onclick="gp(this,'g-uschg')"><div class="dot"></div>是</label>
+            <label class="ro g-uschg" onclick="gp(this,'g-uschg')"><div class="dot"></div>否</label>
           </div>
         </div>
       </div>
@@ -159,15 +160,15 @@ textarea{resize:vertical;min-height:80px;line-height:1.6;}
         <div class="field"><label>雅思成绩</label><input type="text" id="uk-ielts" placeholder="例：7.0 / 备考中 / N/A"></div>
         <div class="field"><label>是否对口专业申请</label>
           <div class="rg fw-row" style="margin-top:4px;">
-            <label class="ro g-ukrel" onclick="gp(this,&#39;g-ukrel&#39;)"><div class="dot"></div>是，对口</label>
-            <label class="ro g-ukrel" onclick="gp(this,&#39;g-ukrel&#39;)"><div class="dot"></div>否，转方向</label>
+            <label class="ro g-ukrel" onclick="gp(this,'g-ukrel')"><div class="dot"></div>是，对口</label>
+            <label class="ro g-ukrel" onclick="gp(this,'g-ukrel')"><div class="dot"></div>否，转方向</label>
           </div>
         </div>
         <div class="field"><label>是否有工作经验</label>
           <div class="rg fw-row" style="margin-top:4px;">
-            <label class="ro g-ukwk" onclick="gp(this,&#39;g-ukwk&#39;)"><div class="dot"></div>有（1年以上）</label>
-            <label class="ro g-ukwk" onclick="gp(this,&#39;g-ukwk&#39;)"><div class="dot"></div>有（1年以下）</label>
-            <label class="ro g-ukwk" onclick="gp(this,&#39;g-ukwk&#39;)"><div class="dot"></div>暂无</label>
+            <label class="ro g-ukwk" onclick="gp(this,'g-ukwk')"><div class="dot"></div>有（1年以上）</label>
+            <label class="ro g-ukwk" onclick="gp(this,'g-ukwk')"><div class="dot"></div>有（1年以下）</label>
+            <label class="ro g-ukwk" onclick="gp(this,'g-ukwk')"><div class="dot"></div>暂无</label>
           </div>
         </div>
       </div>
@@ -199,7 +200,7 @@ textarea{resize:vertical;min-height:80px;line-height:1.6;}
   <div class="step" id="step3">
     <div class="card">
       <div class="sl">第 3 步 / 共 6 步</div>
-      <div class="st">意向专业 &amp; 补充信息（如已有成绩）</div>
+      <div class="st">意向专业 & 补充信息（如已有成绩）</div>
       <div class="field"><label>意向申请专业</label><input type="text" id="target-major" placeholder="例：CS / 金融 / MBA / 教育学"></div>
       <div class="row2">
         <div class="field"><label>托福</label><input type="text" id="toefl" placeholder="例：105 / 备考中 / N/A"></div>
@@ -226,17 +227,17 @@ textarea{resize:vertical;min-height:80px;line-height:1.6;}
       <div class="field">
         <label>论文 / 科研（可多选，选后填详情）</label>
         <div class="rg" style="margin-top:6px;">
-          <label class="co" onclick="toggleXb(this,&#39;paper-box&#39;,&#39;两者都没有&#39;)"><div class="ci"></div>有论文</label>
+          <label class="co" onclick="toggleXb(this,'paper-box','两者都没有')"><div class="ci"></div>有论文</label>
           <div class="xb" id="paper-box">
             <label>论文情况描述</label>
             <textarea id="paper-desc" placeholder="例：一作 SCI Q2 已发表 / EI 在投 / 核心期刊在审 / 会议论文已接受"></textarea>
           </div>
-          <label class="co" onclick="toggleXb(this,&#39;research-box&#39;,&#39;两者都没有&#39;)"><div class="ci"></div>有科研经历</label>
+          <label class="co" onclick="toggleXb(this,'research-box','两者都没有')"><div class="ci"></div>有科研经历</label>
           <div class="xb" id="research-box">
             <label>科研情况描述</label>
             <textarea id="research-desc" placeholder="例：跟导师做NLP方向半年，参与数据标注和模型训练，暂无产出 / 独立课题有结题报告"></textarea>
           </div>
-          <label class="co" onclick="toggleNone(this,[&#39;paper-box&#39;,&#39;research-box&#39;])"><div class="ci"></div>两者都没有</label>
+          <label class="co" onclick="toggleNone(this,['paper-box','research-box'])"><div class="ci"></div>两者都没有</label>
         </div>
       </div>
       <div class="nr">
@@ -250,15 +251,15 @@ textarea{resize:vertical;min-height:80px;line-height:1.6;}
   <div class="step" id="step5">
     <div class="card">
       <div class="sl">第 5 步 / 共 6 步</div>
-      <div class="st">身份信息 &amp; 申请策略</div>
+      <div class="st">身份信息 & 申请策略</div>
 
       <div class="field">
         <label>护照 / 身份<span class="rm">*</span></label>
         <div class="rg fw-row" style="margin-top:4px;">
-          <label class="ro g-pp" onclick="gpPP(this,&#39;中国&#39;)"><div class="dot"></div>中国</label>
-          <label class="ro g-pp" onclick="gpPP(this,&#39;美国绿卡/公民&#39;)"><div class="dot"></div>美国绿卡/公民</label>
-          <label class="ro g-pp" onclick="gpPP(this,&#39;英国&#39;)"><div class="dot"></div>英国</label>
-          <label class="ro g-pp" onclick="gpPP(this,&#39;其他&#39;)"><div class="dot"></div>其他</label>
+          <label class="ro g-pp" onclick="gpPP(this,'中国')"><div class="dot"></div>中国</label>
+          <label class="ro g-pp" onclick="gpPP(this,'美国绿卡/公民')"><div class="dot"></div>美国绿卡/公民</label>
+          <label class="ro g-pp" onclick="gpPP(this,'英国')"><div class="dot"></div>英国</label>
+          <label class="ro g-pp" onclick="gpPP(this,'其他')"><div class="dot"></div>其他</label>
         </div>
         <div class="xb" id="pp-other-box" style="margin-top:4px;">
           <input type="text" id="pp-other" placeholder="请注明国籍/身份">
@@ -268,11 +269,11 @@ textarea{resize:vertical;min-height:80px;line-height:1.6;}
       <div class="field">
         <label>当前所在地</label>
         <div class="rg fw-row" style="margin-top:4px;">
-          <label class="ro g-loc" onclick="gp(this,&#39;g-loc&#39;)"><div class="dot"></div>中国大陆</label>
-          <label class="ro g-loc" onclick="gp(this,&#39;g-loc&#39;)"><div class="dot"></div>美国</label>
-          <label class="ro g-loc" onclick="gp(this,&#39;g-loc&#39;)"><div class="dot"></div>英国</label>
-          <label class="ro g-loc" onclick="gp(this,&#39;g-loc&#39;)"><div class="dot"></div>香港</label>
-          <label class="ro g-loc" onclick="gp(this,&#39;g-loc&#39;)"><div class="dot"></div>其他</label>
+          <label class="ro g-loc" onclick="gp(this,'g-loc')"><div class="dot"></div>中国大陆</label>
+          <label class="ro g-loc" onclick="gp(this,'g-loc')"><div class="dot"></div>美国</label>
+          <label class="ro g-loc" onclick="gp(this,'g-loc')"><div class="dot"></div>英国</label>
+          <label class="ro g-loc" onclick="gp(this,'g-loc')"><div class="dot"></div>香港</label>
+          <label class="ro g-loc" onclick="gp(this,'g-loc')"><div class="dot"></div>其他</label>
         </div>
       </div>
 
@@ -281,29 +282,29 @@ textarea{resize:vertical;min-height:80px;line-height:1.6;}
       <div class="field">
         <label>申请目标</label>
         <div class="rg" style="margin-top:4px;">
-          <label class="ro g-goal" onclick="gp(this,&#39;g-goal&#39;)"><div class="dot"></div>冲排名（能冲多高冲多高）</label>
-          <label class="ro g-goal" onclick="gp(this,&#39;g-goal&#39;)"><div class="dot"></div>稳录（保证录到合适学校）</label>
-          <label class="ro g-goal" onclick="gp(this,&#39;g-goal&#39;)"><div class="dot"></div>性价比（省钱 / 奖学金优先）</label>
-          <label class="ro g-goal" onclick="gp(this,&#39;g-goal&#39;)"><div class="dot"></div>还没想好</label>
+          <label class="ro g-goal" onclick="gp(this,'g-goal')"><div class="dot"></div>冲排名（能冲多高冲多高）</label>
+          <label class="ro g-goal" onclick="gp(this,'g-goal')"><div class="dot"></div>稳录（保证录到合适学校）</label>
+          <label class="ro g-goal" onclick="gp(this,'g-goal')"><div class="dot"></div>性价比（省钱 / 奖学金优先）</label>
+          <label class="ro g-goal" onclick="gp(this,'g-goal')"><div class="dot"></div>还没想好</label>
         </div>
       </div>
 
       <div class="field">
         <label>申请时间</label>
         <div class="rg fw-row" style="margin-top:4px;">
-          <label class="ro g-time" onclick="gp(this,&#39;g-time&#39;)"><div class="dot"></div>今年申请</label>
-          <label class="ro g-time" onclick="gp(this,&#39;g-time&#39;)"><div class="dot"></div>明年申请</label>
-          <label class="ro g-time" onclick="gp(this,&#39;g-time&#39;)"><div class="dot"></div>不确定</label>
+          <label class="ro g-time" onclick="gp(this,'g-time')"><div class="dot"></div>今年申请</label>
+          <label class="ro g-time" onclick="gp(this,'g-time')"><div class="dot"></div>明年申请</label>
+          <label class="ro g-time" onclick="gp(this,'g-time')"><div class="dot"></div>不确定</label>
         </div>
       </div>
 
       <div class="field">
         <label>预算范围（人民币/年）</label>
         <div class="rg fw-row" style="margin-top:4px;">
-          <label class="ro g-budget" onclick="gp(this,&#39;g-budget&#39;)"><div class="dot"></div>20万以内</label>
-          <label class="ro g-budget" onclick="gp(this,&#39;g-budget&#39;)"><div class="dot"></div>20-40万</label>
-          <label class="ro g-budget" onclick="gp(this,&#39;g-budget&#39;)"><div class="dot"></div>40-60万</label>
-          <label class="ro g-budget" onclick="gp(this,&#39;g-budget&#39;)"><div class="dot"></div>60万+</label>
+          <label class="ro g-budget" onclick="gp(this,'g-budget')"><div class="dot"></div>20万以内</label>
+          <label class="ro g-budget" onclick="gp(this,'g-budget')"><div class="dot"></div>20-40万</label>
+          <label class="ro g-budget" onclick="gp(this,'g-budget')"><div class="dot"></div>40-60万</label>
+          <label class="ro g-budget" onclick="gp(this,'g-budget')"><div class="dot"></div>60万+</label>
         </div>
       </div>
 
@@ -312,11 +313,11 @@ textarea{resize:vertical;min-height:80px;line-height:1.6;}
       <div class="field">
         <label>风险项（可多选）</label>
         <div class="rg" style="margin-top:4px;">
-          <label class="co risk-co" onclick="toggleCo(this,&#39;以上都没有&#39;)"><div class="ci"></div>转专业申请</label>
-          <label class="co risk-co" onclick="toggleCo(this,&#39;以上都没有&#39;)"><div class="ci"></div>有 Gap（休学 / 间隔年）</label>
-          <label class="co risk-co" onclick="toggleCo(this,&#39;以上都没有&#39;)"><div class="ci"></div>时间紧（距截止不足3个月）</label>
-          <label class="co risk-co" onclick="toggleCo(this,&#39;以上都没有&#39;)"><div class="ci"></div>有身份 / 签证问题</label>
-          <label class="co risk-co" onclick="toggleCo(this,&#39;以上都没有&#39;)"><div class="ci"></div>低龄留学（高中或以下）</label>
+          <label class="co risk-co" onclick="toggleCo(this,'以上都没有')"><div class="ci"></div>转专业申请</label>
+          <label class="co risk-co" onclick="toggleCo(this,'以上都没有')"><div class="ci"></div>有 Gap（休学 / 间隔年）</label>
+          <label class="co risk-co" onclick="toggleCo(this,'以上都没有')"><div class="ci"></div>时间紧（距截止不足3个月）</label>
+          <label class="co risk-co" onclick="toggleCo(this,'以上都没有')"><div class="ci"></div>有身份 / 签证问题</label>
+          <label class="co risk-co" onclick="toggleCo(this,'以上都没有')"><div class="ci"></div>低龄留学（高中或以下）</label>
           <label class="co risk-co" onclick="toggleNone(this,[])"><div class="ci"></div>以上都没有</label>
         </div>
       </div>
@@ -326,9 +327,9 @@ textarea{resize:vertical;min-height:80px;line-height:1.6;}
       <div class="field">
         <label>是否希望进一步规划？</label>
         <div class="rg" style="margin-top:4px;">
-          <label class="ro g-intent" onclick="gp(this,&#39;g-intent&#39;)"><div class="dot"></div>想详细规划（尽快了解我的情况）</label>
-          <label class="ro g-intent" onclick="gp(this,&#39;g-intent&#39;)"><div class="dot"></div>先了解一下，不急</label>
-          <label class="ro g-intent" onclick="gp(this,&#39;g-intent&#39;)"><div class="dot"></div>暂时不考虑，只想看结果</label>
+          <label class="ro g-intent" onclick="gp(this,'g-intent')"><div class="dot"></div>想详细规划（尽快了解我的情况）</label>
+          <label class="ro g-intent" onclick="gp(this,'g-intent')"><div class="dot"></div>先了解一下，不急</label>
+          <label class="ro g-intent" onclick="gp(this,'g-intent')"><div class="dot"></div>暂时不考虑，只想看结果</label>
         </div>
       </div>
 
@@ -541,8 +542,7 @@ function submitForm(){
   }
 
   console.log('提交数据:',JSON.stringify(data,null,2));
-  // TODO: 接 Make Webhook 时取消注释并替换 URL
-  // fetch('YOUR_MAKE_WEBHOOK_URL',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+  fetch('https://hook.us2.make.com/lbfn1wkwc7p0hj8xaufi1sa5j1q37b7i',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}).catch(function(e){console.error('Webhook error:',e);});
 
   document.querySelectorAll('.step').forEach(function(s){s.style.display='none';});
   document.querySelector('.pb').style.display='none';
@@ -550,6 +550,5 @@ function submitForm(){
   document.getElementById('success').classList.add('visible');
 }
 </script>
-
-
-</body></html>
+</body>
+</html>
