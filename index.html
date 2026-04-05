@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)file:///C:/Users/rchle/Downloads/aplus-form_6.html -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3分钟测你能申到什么学校 | APlus Consulting</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif;background:#f7f7f5;color:#1a1a1a;min-height:100vh;}
+.fw{max-width:640px;margin:0 auto;padding:2rem 1rem 4rem;}
+.fh{margin-bottom:1.75rem;}
+.fh h1{font-size:21px;font-weight:700;color:#1a1a1a;line-height:1.4;margin-bottom:6px;}
+.fh p{font-size:14px;color:#666;}
+.pb{display:flex;gap:4px;margin-bottom:2rem;}
+.ps{height:3px;flex:1;background:#e0e0e0;border-radius:2px;transition:background 0.3s;}
+.ps.active{background:#1D9E75;}
+.step{display:none;}
+.step.visible{display:block;}
+.card{background:#fff;border-radius:16px;padding:1.5rem;margin-bottom:1rem;}
+.sl{font-size:12px;font-weight:600;color:#1D9E75;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.6rem;}
+.st{font-size:18px;font-weight:700;color:#1a1a1a;margin-bottom:1.5rem;line-height:1.4;}
+.field{margin-bottom:1.25rem;}
+.field>label{display:block;font-size:13px;color:#555;margin-bottom:6px;font-weight:500;}
+input[type=text],textarea{width:100%;padding:10px 14px;font-size:15px;border:1px solid #e0e0e0;border-radius:10px;background:#fff;color:#1a1a1a;font-family:inherit;outline:none;transition:border-color .2s,box-shadow .2s;}
+input[type=text]:focus,textarea:focus{border-color:#1D9E75;box-shadow:0 0 0 3px rgba(29,158,117,.1);}
+textarea{resize:vertical;min-height:80px;line-height:1.6;}
+.rg{display:flex;flex-direction:column;gap:8px;}
+.fw-row{display:flex;flex-wrap:wrap;gap:8px;}
+.fw-row .ro{flex:1;min-width:120px;}
+.ro,.co{display:flex;align-items:center;gap:10px;padding:11px 14px;border:1px solid #e0e0e0;border-radius:10px;cursor:pointer;transition:border-color .15s,background .15s;font-size:14px;color:#1a1a1a;background:#fff;user-select:none;}
+.ro:hover,.co:hover{border-color:#1D9E75;background:#f0faf6;}
+.ro.sel,.co.sel{border-color:#1D9E75;background:#f0faf6;color:#0F6E56;}
+.dot{width:17px;height:17px;border-radius:50%;border:1.5px solid #ccc;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .15s;}
+.ro.sel .dot{border-color:#1D9E75;background:#1D9E75;}
+.ro.sel .dot::after{content:'';width:7px;height:7px;border-radius:50%;background:white;}
+.ci{width:17px;height:17px;border-radius:5px;border:1.5px solid #ccc;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .15s;}
+.co.sel .ci{border-color:#1D9E75;background:#1D9E75;}
+.co.sel .ci::after{content:'checkmark';font-size:0;color:white;font-weight:700;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/10px no-repeat;}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.nr{display:flex;justify-content:space-between;align-items:center;margin-top:1.5rem;gap:12px;}
+.bb{font-size:14px;color:#888;background:none;border:none;cursor:pointer;padding:8px 0;font-family:inherit;}
+.bb:hover{color:#333;}
+.bn{padding:12px 32px;background:#1D9E75;color:white;border:none;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;transition:background .15s;}
+.bn:hover{background:#0F6E56;}
+.bn:active{transform:scale(.98);}
+.rm{color:#e24b4a;margin-left:2px;}
+.wc{background:#f0faf6;border-radius:12px;padding:1.25rem;margin-bottom:1.5rem;border:1px solid #c8ead9;}
+.wc p{font-size:13px;color:#444;line-height:1.7;}
+.wc strong{color:#0F6E56;font-weight:600;}
+.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:20px;margin-left:6px;font-weight:600;}
+.tag-us{background:#e1f5ee;color:#085041;}
+.tag-uk{background:#e6f1fb;color:#0c447c;}
+.tag-hk{background:#faece7;color:#712b13;}
+.xb{display:none;padding:12px 14px;background:#f7f7f5;border-radius:10px;margin-top:4px;}
+.xb label{font-size:13px;color:#555;font-weight:500;display:block;margin-bottom:6px;}
+.xb textarea,.xb input[type=text]{font-size:14px;min-height:64px;margin-bottom:0;}
+.sep{height:1px;background:#f0f0f0;margin:1.25rem 0;}
+.hidden{display:none!important;}
+.ss{display:none;text-align:center;padding:4rem 1rem;}
+.ss.visible{display:block;}
+.si{width:64px;height:64px;border-radius:50%;background:#e1f5ee;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:28px;color:#0F6E56;}
+.ss h2{font-size:22px;font-weight:700;color:#1a1a1a;margin-bottom:10px;}
+.ss p{font-size:14px;color:#666;line-height:1.7;}
+@media(max-width:480px){.row2{grid-template-columns:1fr;}.fw{padding:1rem .75rem 3rem;}.fw-row .ro{min-width:100px;}}
+</style>
+</head>
+<body>
+<div class="fw">
+  <div class="fh">
+    <h1>3分钟测你能申到什么学校（真实版）</h1>
+    <p>基于背景给出真实梯队 + 可提升空间</p>
+  </div>
+  <div class="pb" id="progress">
+    <div class="ps active"></div><div class="ps"></div><div class="ps"></div>
+    <div class="ps"></div><div class="ps"></div><div class="ps"></div>
+  </div>
+
+  <!-- STEP 1 -->
+  <div class="step visible" id="step1">
+    <div class="card">
+      <div class="sl">第 1 步 / 共 6 步</div>
+      <div class="st">你在申请哪个方向？</div>
+      <div class="rg" id="stage-group">
+        <label class="ro" onclick="pickStage(this,&#39;美本&#39;)"><div class="dot"></div>美本（本科申请）<span class="tag tag-us">美国</span></label>
+        <label class="ro" onclick="pickStage(this,&#39;美本转学&#39;)"><div class="dot"></div>美本转学（Transfer）<span class="tag tag-us">美国</span></label>
+        <label class="ro" onclick="pickStage(this,&#39;美研&#39;)"><div class="dot"></div>美研（研究生申请）<span class="tag tag-us">美国</span></label>
+        <label class="ro" onclick="pickStage(this,&#39;英本&#39;)"><div class="dot"></div>英本（本科申请）<span class="tag tag-uk">英国</span></label>
+        <label class="ro" onclick="pickStage(this,&#39;英研&#39;)"><div class="dot"></div>英研（研究生申请）<span class="tag tag-uk">英国</span></label>
+        <label class="ro" onclick="pickStage(this,&#39;港本&#39;)"><div class="dot"></div>港本（本科申请）<span class="tag tag-hk">香港</span></label>
+        <label class="ro" onclick="pickStage(this,&#39;港研&#39;)"><div class="dot"></div>港研（研究生申请）<span class="tag tag-hk">香港</span></label>
+        <label class="ro" onclick="pickStage(this,&#39;还没确定&#39;)"><div class="dot"></div>还没确定，想先了解</label>
+      </div>
+      <div class="nr"><span></span><button class="bn" onclick="goNext(1)">下一步 →</button></div>
+    </div>
+  </div>
+
+  <!-- STEP 2 分流学术背景 -->
+  <div class="step" id="step2">
+    <div class="card">
+      <div class="sl">第 2 步 / 共 6 步</div>
+      <div class="st" id="s2title">学术背景</div>
+
+      <!-- 美本 / 英本 / 港本 -->
+      <div id="b-ugrad" class="hidden">
+        <div class="field">
+          <label>当前阶段<span class="rm">*</span></label>
+          <div class="rg fw-row" style="margin-top:4px;">
+            <label class="ro g-ustage" onclick="gp(this,&#39;g-ustage&#39;)"><div class="dot"></div>高中在读</label>
+            <label class="ro g-ustage" onclick="gp(this,&#39;g-ustage&#39;)"><div class="dot"></div>大一</label>
+            <label class="ro g-ustage" onclick="gp(this,&#39;g-ustage&#39;)"><div class="dot"></div>大二</label>
+            <label class="ro g-ustage" onclick="gp(this,&#39;g-ustage&#39;)"><div class="dot"></div>已毕业</label>
+          </div>
+        </div>
+        <div class="field"><label>在读学校</label><input type="text" id="u-school" placeholder="例：上海中学 / 北京大学"></div>
+        <div class="row2">
+          <div class="field"><label>GPA / 成绩</label><input type="text" id="u-gpa" placeholder="例：3.8/4.0 或 92/100"></div>
+          <div class="field"><label>专业/方向</label><input type="text" id="u-major" placeholder="例：文科 / 理科 / 经济"></div>
+        </div>
+        <div id="b-sat" class="hidden">
+          <div class="field"><label>SAT / ACT</label><input type="text" id="u-sat" placeholder="例：1480 / 备考中 / N/A"></div>
+          <div class="field"><label>AP / IB / A-Level 成绩</label><input type="text" id="u-ap" placeholder="例：AP 5门5分 / IB 40 / A*AA / N/A"></div>
+        </div>
+      </div>
+
+      <!-- 美本转学 -->
+      <div id="b-transfer" class="hidden">
+        <div class="field"><label>当前就读大学<span class="rm">*</span></label><input type="text" id="t-school" placeholder="例：UCLA / 北京大学 / 社区大学"></div>
+        <div class="row2">
+          <div class="field"><label>大学 GPA<span class="rm">*</span></label><input type="text" id="t-gpa" placeholder="例：3.7/4.0"></div>
+          <div class="field"><label>已修学分</label><input type="text" id="t-credits" placeholder="例：60学分"></div>
+        </div>
+        <div class="field"><label>在读专业</label><input type="text" id="t-major" placeholder="例：计算机科学"></div>
+        <div class="field"><label>高中 GPA / SAT（选填）</label><input type="text" id="t-hs" placeholder="例：SAT 1400 / 高中GPA 3.5"></div>
+      </div>
+
+      <!-- 美研 -->
+      <div id="b-us-grad" class="hidden">
+        <div class="field"><label>本科学校<span class="rm">*</span></label><input type="text" id="ug-school" placeholder="例：北京大学 / UIUC"></div>
+        <div class="row2">
+          <div class="field"><label>本科 GPA<span class="rm">*</span></label><input type="text" id="ug-gpa" placeholder="例：3.5/4.0 或 85/100"></div>
+          <div class="field"><label>本科专业</label><input type="text" id="ug-major" placeholder="例：计算机科学"></div>
+        </div>
+        <div class="field"><label>GRE / GMAT</label><input type="text" id="ug-gre" placeholder="例：330+170 / 710 / 备考中 / N/A"></div>
+        <div class="field"><label>是否转专业申请</label>
+          <div class="rg fw-row" style="margin-top:4px;">
+            <label class="ro g-uschg" onclick="gp(this,&#39;g-uschg&#39;)"><div class="dot"></div>是</label>
+            <label class="ro g-uschg" onclick="gp(this,&#39;g-uschg&#39;)"><div class="dot"></div>否</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 英研 -->
+      <div id="b-uk-grad" class="hidden">
+        <div class="field"><label>本科学校<span class="rm">*</span></label><input type="text" id="uk-school" placeholder="例：复旦大学 / University of Bath"></div>
+        <div class="row2">
+          <div class="field"><label>本科 GPA<span class="rm">*</span></label><input type="text" id="uk-gpa" placeholder="例：3.5/4.0 或 85/100"></div>
+          <div class="field"><label>本科专业</label><input type="text" id="uk-major" placeholder="例：金融"></div>
+        </div>
+        <div class="field"><label>雅思成绩</label><input type="text" id="uk-ielts" placeholder="例：7.0 / 备考中 / N/A"></div>
+        <div class="field"><label>是否对口专业申请</label>
+          <div class="rg fw-row" style="margin-top:4px;">
+            <label class="ro g-ukrel" onclick="gp(this,&#39;g-ukrel&#39;)"><div class="dot"></div>是，对口</label>
+            <label class="ro g-ukrel" onclick="gp(this,&#39;g-ukrel&#39;)"><div class="dot"></div>否，转方向</label>
+          </div>
+        </div>
+        <div class="field"><label>是否有工作经验</label>
+          <div class="rg fw-row" style="margin-top:4px;">
+            <label class="ro g-ukwk" onclick="gp(this,&#39;g-ukwk&#39;)"><div class="dot"></div>有（1年以上）</label>
+            <label class="ro g-ukwk" onclick="gp(this,&#39;g-ukwk&#39;)"><div class="dot"></div>有（1年以下）</label>
+            <label class="ro g-ukwk" onclick="gp(this,&#39;g-ukwk&#39;)"><div class="dot"></div>暂无</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 港本 / 港研 -->
+      <div id="b-hk" class="hidden">
+        <div class="field"><label>在读/毕业学校<span class="rm">*</span></label><input type="text" id="hk-school" placeholder="例：北京大学 / 上海中学"></div>
+        <div class="row2">
+          <div class="field"><label>GPA / 成绩<span class="rm">*</span></label><input type="text" id="hk-gpa" placeholder="例：3.6/4.0 或 88/100"></div>
+          <div class="field"><label>专业/方向</label><input type="text" id="hk-major" placeholder="例：商科 / 理工 / 文科"></div>
+        </div>
+        <div class="field"><label>英语成绩（托福/雅思）</label><input type="text" id="hk-eng" placeholder="例：托福100 / 雅思6.5 / N/A"></div>
+      </div>
+
+      <!-- 还没确定 -->
+      <div id="b-tbd" class="hidden">
+        <div class="field"><label>目前就读年级 / 状态</label><input type="text" id="tbd-status" placeholder="例：高二 / 大一 / 已工作"></div>
+        <div class="field"><label>大概感兴趣的方向</label><input type="text" id="tbd-interest" placeholder="例：美国名校 / 英国省钱 / 香港留下来"></div>
+      </div>
+
+      <div class="nr">
+        <button class="bb" onclick="goPrev(2)">← 上一步</button>
+        <button class="bn" onclick="goNext(2)">下一步 →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3 意向专业 + 语言 -->
+  <div class="step" id="step3">
+    <div class="card">
+      <div class="sl">第 3 步 / 共 6 步</div>
+      <div class="st">意向专业 &amp; 补充信息（如已有成绩）</div>
+      <div class="field"><label>意向申请专业</label><input type="text" id="target-major" placeholder="例：CS / 金融 / MBA / 教育学"></div>
+      <div class="row2">
+        <div class="field"><label>托福</label><input type="text" id="toefl" placeholder="例：105 / 备考中 / N/A"></div>
+        <div class="field"><label>雅思</label><input type="text" id="ielts" placeholder="例：7.0 / N/A"></div>
+      </div>
+      <div class="nr">
+        <button class="bb" onclick="goPrev(3)">← 上一步</button>
+        <button class="bn" onclick="goNext(3)">下一步 →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4 背景经历 -->
+  <div class="step" id="step4">
+    <div class="card">
+      <div class="sl">第 4 步 / 共 6 步</div>
+      <div class="st">背景经历</div>
+      <div style="background:#fff8e1;border-radius:10px;padding:10px 14px;margin-bottom:1.25rem;font-size:13px;color:#7a5c00;border:1px solid #ffe082;">很多申请失败的原因，不是成绩，而是背景不匹配——认真填写这一步很关键。</div>
+      <div class="field">
+        <label>实习 / 竞赛 / 社团（简述，没有填"无"）</label>
+        <textarea id="experience" placeholder="例：字节跳动产品实习3个月 / MCM数学建模竞赛 / 学生会主席 / 无"></textarea>
+      </div>
+      <div class="sep"></div>
+      <div class="field">
+        <label>论文 / 科研（可多选，选后填详情）</label>
+        <div class="rg" style="margin-top:6px;">
+          <label class="co" onclick="toggleXb(this,&#39;paper-box&#39;,&#39;两者都没有&#39;)"><div class="ci"></div>有论文</label>
+          <div class="xb" id="paper-box">
+            <label>论文情况描述</label>
+            <textarea id="paper-desc" placeholder="例：一作 SCI Q2 已发表 / EI 在投 / 核心期刊在审 / 会议论文已接受"></textarea>
+          </div>
+          <label class="co" onclick="toggleXb(this,&#39;research-box&#39;,&#39;两者都没有&#39;)"><div class="ci"></div>有科研经历</label>
+          <div class="xb" id="research-box">
+            <label>科研情况描述</label>
+            <textarea id="research-desc" placeholder="例：跟导师做NLP方向半年，参与数据标注和模型训练，暂无产出 / 独立课题有结题报告"></textarea>
+          </div>
+          <label class="co" onclick="toggleNone(this,[&#39;paper-box&#39;,&#39;research-box&#39;])"><div class="ci"></div>两者都没有</label>
+        </div>
+      </div>
+      <div class="nr">
+        <button class="bb" onclick="goPrev(4)">← 上一步</button>
+        <button class="bn" onclick="goNext(4)">下一步 →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 5 身份 + 策略 -->
+  <div class="step" id="step5">
+    <div class="card">
+      <div class="sl">第 5 步 / 共 6 步</div>
+      <div class="st">身份信息 &amp; 申请策略</div>
+
+      <div class="field">
+        <label>护照 / 身份<span class="rm">*</span></label>
+        <div class="rg fw-row" style="margin-top:4px;">
+          <label class="ro g-pp" onclick="gpPP(this,&#39;中国&#39;)"><div class="dot"></div>中国</label>
+          <label class="ro g-pp" onclick="gpPP(this,&#39;美国绿卡/公民&#39;)"><div class="dot"></div>美国绿卡/公民</label>
+          <label class="ro g-pp" onclick="gpPP(this,&#39;英国&#39;)"><div class="dot"></div>英国</label>
+          <label class="ro g-pp" onclick="gpPP(this,&#39;其他&#39;)"><div class="dot"></div>其他</label>
+        </div>
+        <div class="xb" id="pp-other-box" style="margin-top:4px;">
+          <input type="text" id="pp-other" placeholder="请注明国籍/身份">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>当前所在地</label>
+        <div class="rg fw-row" style="margin-top:4px;">
+          <label class="ro g-loc" onclick="gp(this,&#39;g-loc&#39;)"><div class="dot"></div>中国大陆</label>
+          <label class="ro g-loc" onclick="gp(this,&#39;g-loc&#39;)"><div class="dot"></div>美国</label>
+          <label class="ro g-loc" onclick="gp(this,&#39;g-loc&#39;)"><div class="dot"></div>英国</label>
+          <label class="ro g-loc" onclick="gp(this,&#39;g-loc&#39;)"><div class="dot"></div>香港</label>
+          <label class="ro g-loc" onclick="gp(this,&#39;g-loc&#39;)"><div class="dot"></div>其他</label>
+        </div>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="field">
+        <label>申请目标</label>
+        <div class="rg" style="margin-top:4px;">
+          <label class="ro g-goal" onclick="gp(this,&#39;g-goal&#39;)"><div class="dot"></div>冲排名（能冲多高冲多高）</label>
+          <label class="ro g-goal" onclick="gp(this,&#39;g-goal&#39;)"><div class="dot"></div>稳录（保证录到合适学校）</label>
+          <label class="ro g-goal" onclick="gp(this,&#39;g-goal&#39;)"><div class="dot"></div>性价比（省钱 / 奖学金优先）</label>
+          <label class="ro g-goal" onclick="gp(this,&#39;g-goal&#39;)"><div class="dot"></div>还没想好</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>申请时间</label>
+        <div class="rg fw-row" style="margin-top:4px;">
+          <label class="ro g-time" onclick="gp(this,&#39;g-time&#39;)"><div class="dot"></div>今年申请</label>
+          <label class="ro g-time" onclick="gp(this,&#39;g-time&#39;)"><div class="dot"></div>明年申请</label>
+          <label class="ro g-time" onclick="gp(this,&#39;g-time&#39;)"><div class="dot"></div>不确定</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>预算范围（人民币/年）</label>
+        <div class="rg fw-row" style="margin-top:4px;">
+          <label class="ro g-budget" onclick="gp(this,&#39;g-budget&#39;)"><div class="dot"></div>20万以内</label>
+          <label class="ro g-budget" onclick="gp(this,&#39;g-budget&#39;)"><div class="dot"></div>20-40万</label>
+          <label class="ro g-budget" onclick="gp(this,&#39;g-budget&#39;)"><div class="dot"></div>40-60万</label>
+          <label class="ro g-budget" onclick="gp(this,&#39;g-budget&#39;)"><div class="dot"></div>60万+</label>
+        </div>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="field">
+        <label>风险项（可多选）</label>
+        <div class="rg" style="margin-top:4px;">
+          <label class="co risk-co" onclick="toggleCo(this,&#39;以上都没有&#39;)"><div class="ci"></div>转专业申请</label>
+          <label class="co risk-co" onclick="toggleCo(this,&#39;以上都没有&#39;)"><div class="ci"></div>有 Gap（休学 / 间隔年）</label>
+          <label class="co risk-co" onclick="toggleCo(this,&#39;以上都没有&#39;)"><div class="ci"></div>时间紧（距截止不足3个月）</label>
+          <label class="co risk-co" onclick="toggleCo(this,&#39;以上都没有&#39;)"><div class="ci"></div>有身份 / 签证问题</label>
+          <label class="co risk-co" onclick="toggleCo(this,&#39;以上都没有&#39;)"><div class="ci"></div>低龄留学（高中或以下）</label>
+          <label class="co risk-co" onclick="toggleNone(this,[])"><div class="ci"></div>以上都没有</label>
+        </div>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="field">
+        <label>是否希望进一步规划？</label>
+        <div class="rg" style="margin-top:4px;">
+          <label class="ro g-intent" onclick="gp(this,&#39;g-intent&#39;)"><div class="dot"></div>想详细规划（尽快了解我的情况）</label>
+          <label class="ro g-intent" onclick="gp(this,&#39;g-intent&#39;)"><div class="dot"></div>先了解一下，不急</label>
+          <label class="ro g-intent" onclick="gp(this,&#39;g-intent&#39;)"><div class="dot"></div>暂时不考虑，只想看结果</label>
+        </div>
+      </div>
+
+      <div class="nr">
+        <button class="bb" onclick="goPrev(5)">← 上一步</button>
+        <button class="bn" onclick="goNext(5)">下一步 →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 6 联系方式 -->
+  <div class="step" id="step6">
+    <div class="card">
+      <div class="sl">第 6 步 / 共 6 步</div>
+      <div class="st">留下联系方式，领取完整报告</div>
+      <div class="wc"><p>填写后，顾问会在 <strong>1个工作日内</strong> 发送完整测评报告 + 专属选校建议，不会有骚扰电话。</p></div>
+      <div class="field"><label>微信号<span class="rm">*</span></label><input type="text" id="wechat" placeholder="你的微信号"></div>
+      <div class="field"><label>手机号（选填）</label><input type="text" id="phone" placeholder="方便顾问联系（可不填）"></div>
+      <div class="field"><label>还有什么想说的？（选填）</label><textarea id="note" placeholder="例：时间比较紧，想尽快咨询 / 在美英港之间纠结" style="min-height:60px;"></textarea></div>
+      <div class="nr">
+        <button class="bb" onclick="goPrev(6)">← 上一步</button>
+        <button class="bn" onclick="submitForm()" style="padding:12px 36px;">提交测评</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success -->
+  <div class="ss" id="success">
+    <div class="si">✓</div>
+    <h2>测评完成（你的申请区间已初步确定）</h2>
+    <p style="margin-bottom:.75rem;">已根据你的背景完成初步分析。</p>
+    <p style="margin-bottom:1.25rem;">关键在于<strong style="color:#1a1a1a;">选校策略和提升空间</strong>——这部分需要顾问1对1帮你判断。</p>
+    <div style="background:#f0faf6;border-radius:12px;padding:1.25rem;margin-bottom:1rem;border:1px solid #c8ead9;text-align:left;">
+      <p style="font-size:14px;color:#0F6E56;font-weight:600;margin-bottom:6px;">建议现在直接添加顾问微信</p>
+      <p style="font-size:13px;color:#444;line-height:1.7;">可帮你判断是否还能"往上冲一档"，给出真实的冲刺/主申/保底梯队。</p>
+    </div>
+    <p style="font-size:12px;color:#999;">申请季名额有限，优先回复已添加的同学。</p>
+  </div>
+</div>
+
+<script>
+var cur=1, stage='';
+
+function upProg(n){document.querySelectorAll('.ps').forEach(function(s,i){s.classList.toggle('active',i<n);});}
+function showStep(n){document.querySelectorAll('.step').forEach(function(s){s.classList.remove('visible');});var el=document.getElementById('step'+n);if(el){el.classList.add('visible');upProg(n);}window.scrollTo(0,0);}
+
+function pickStage(el,val){
+  document.querySelectorAll('#stage-group .ro').forEach(function(r){r.classList.remove('sel');});
+  el.classList.add('sel'); stage=val;
+}
+
+function gp(el,grp){
+  document.querySelectorAll('.'+grp).forEach(function(r){r.classList.remove('sel');});
+  el.classList.add('sel');
+}
+
+function gpPP(el,val){
+  gp(el,'g-pp');
+  document.getElementById('pp-other-box').style.display=(val==='其他')?'block':'none';
+}
+
+// 普通多选（含互斥逻辑）
+// noneText: 当选中此项时取消其他，选中其他时取消此项
+function toggleCo(el,noneText){
+  el.classList.toggle('sel');
+  if(!noneText) return;
+  var group = el.closest('.rg,.cg');
+  if(!group) return;
+  var allCo = group.querySelectorAll('.co');
+  if(el.classList.contains('sel') && el.textContent.trim()===noneText){
+    // 选中了"无"→取消其他所有
+    allCo.forEach(function(c){if(c!==el){c.classList.remove('sel');}});
+  } else if(el.classList.contains('sel') && el.textContent.trim()!==noneText){
+    // 选中了实质项→取消"无"
+    allCo.forEach(function(c){
+      if(c.textContent.trim()===noneText){c.classList.remove('sel');}
+    });
+  }
+}
+
+// 带展开框的多选（含互斥逻辑）
+function toggleXb(el,boxId,noneText){
+  el.classList.toggle('sel');
+  document.getElementById(boxId).style.display=el.classList.contains('sel')?'block':'none';
+  if(!noneText) return;
+  var group = el.closest('.rg,.cg');
+  if(!group) return;
+  var allCo = group.querySelectorAll('.co');
+  if(el.classList.contains('sel') && el.textContent.trim()!==noneText){
+    // 选中实质项→取消"无"
+    allCo.forEach(function(c){
+      if(c.textContent.trim()===noneText){c.classList.remove('sel');}
+    });
+  }
+}
+
+// "无"项逻辑：选中时关闭其他展开项
+function toggleNone(el,boxes){
+  el.classList.toggle('sel');
+  var group = el.closest('.rg,.cg');
+  if(!group) return;
+  if(el.classList.contains('sel')){
+    // 取消所有其他co并关闭展开框
+    group.querySelectorAll('.co').forEach(function(c){if(c!==el)c.classList.remove('sel');});
+    (boxes||[]).forEach(function(id){document.getElementById(id).style.display='none';});
+  }
+}
+
+function setupStep2(){
+  ['b-ugrad','b-transfer','b-us-grad','b-uk-grad','b-hk','b-tbd','b-sat'].forEach(function(id){
+    document.getElementById(id).classList.add('hidden');
+  });
+  var titles={'美本':'高中/本科学术背景','美本转学':'转学背景','美研':'本科学术背景','英本':'高中学术背景','英研':'本科学术背景','港本':'学术背景','港研':'本科学术背景','还没确定':'基本情况'};
+  document.getElementById('s2title').textContent=titles[stage]||'学术背景';
+
+  if(stage==='美本'||stage==='英本'){
+    document.getElementById('b-ugrad').classList.remove('hidden');
+    if(stage==='美本')document.getElementById('b-sat').classList.remove('hidden');
+  }else if(stage==='美本转学'){
+    document.getElementById('b-transfer').classList.remove('hidden');
+  }else if(stage==='美研'){
+    document.getElementById('b-us-grad').classList.remove('hidden');
+  }else if(stage==='英研'){
+    document.getElementById('b-uk-grad').classList.remove('hidden');
+  }else if(stage==='港本'||stage==='港研'){
+    document.getElementById('b-hk').classList.remove('hidden');
+  }else{
+    document.getElementById('b-tbd').classList.remove('hidden');
+  }
+}
+
+function goNext(from){
+  if(from===1){
+    if(!stage){alert('请选择申请方向');return;}
+    setupStep2();
+  }
+  if(from===2){
+    if(stage==='美本'||stage==='英本'){
+      if(!gpv('g-ustage')){alert('请选择当前阶段');return;}
+      if(!v('u-school').trim()){alert('请填写在读学校');return;}
+      if(!v('u-gpa').trim()){alert('请填写GPA/成绩');return;}
+    } else if(stage==='美本转学'){
+      if(!v('t-school').trim()){alert('请填写当前就读大学');return;}
+      if(!v('t-gpa').trim()){alert('请填写大学GPA');return;}
+    } else if(stage==='美研'){
+      if(!v('ug-school').trim()){alert('请填写本科学校');return;}
+      if(!v('ug-gpa').trim()){alert('请填写本科GPA');return;}
+    } else if(stage==='英研'){
+      if(!v('uk-school').trim()){alert('请填写本科学校');return;}
+      if(!v('uk-gpa').trim()){alert('请填写本科GPA');return;}
+    } else if(stage==='港本'||stage==='港研'){
+      if(!v('hk-school').trim()){alert('请填写在读/毕业学校');return;}
+      if(!v('hk-gpa').trim()){alert('请填写GPA/成绩');return;}
+    }
+  }
+  if(from===5){
+    if(!gpv('g-pp')){alert('请选择护照/身份');return;}
+    var ppVal=gpv('g-pp');
+    if(ppVal==='其他'&&!v('pp-other').trim()){alert('请填写具体国籍/身份');return;}
+  }
+  cur=from+1; showStep(cur);
+}
+function goPrev(from){cur=from-1;showStep(cur);}
+
+function gpv(grp){var el=document.querySelector('.'+grp+'.sel');return el?el.textContent.trim():'';}
+function v(id){var el=document.getElementById(id);return el?el.value:'';}
+
+function submitForm(){
+  var w=v('wechat').trim();
+  if(!w){alert('请填写微信号');return;}
+
+  var data={
+    申请方向:stage,
+    意向专业:v('target-major'),
+    托福:v('toefl'),
+    雅思:v('ielts'),
+    实习竞赛社团:v('experience'),
+    有论文:document.getElementById('paper-box').style.display==='block',
+    论文描述:v('paper-desc'),
+    有科研:document.getElementById('research-box').style.display==='block',
+    科研描述:v('research-desc'),
+    护照身份:gpv('g-pp')==='其他'?(v('pp-other')||'其他'):gpv('g-pp'),
+    所在地:gpv('g-loc'),
+    申请目标:gpv('g-goal'),
+    申请时间:gpv('g-time'),
+    预算:gpv('g-budget'),
+    风险项:[].slice.call(document.querySelectorAll('.risk-co.sel')).map(function(e){return e.textContent.trim();}),
+    进一步规划意向:gpv('g-intent'),
+    微信:w,
+    手机号:v('phone'),
+    备注:v('note'),
+    提交时间:new Date().toLocaleString('zh-CN')
+  };
+
+  if(stage==='美本'||stage==='英本'){
+    data.当前阶段=gpv('g-ustage');data.学校=v('u-school');data.GPA=v('u-gpa');data.专业=v('u-major');
+    if(stage==='美本'){data.SAT_ACT=v('u-sat');data.AP_IB_ALevel=v('u-ap');}
+  }else if(stage==='港本'){
+    data.当前阶段=gpv('g-ustage');data.学校=v('u-school');data.GPA=v('u-gpa');data.专业=v('u-major');
+  }else if(stage==='美本转学'){
+    data.当前大学=v('t-school');data.大学GPA=v('t-gpa');data.已修学分=v('t-credits');data.转学专业=v('t-major');data.高中背景=v('t-hs');
+  }else if(stage==='美研'){
+    data.本科学校=v('ug-school');data.本科GPA=v('ug-gpa');data.本科专业=v('ug-major');data.GRE_GMAT=v('ug-gre');data.是否转专业=gpv('g-uschg');
+  }else if(stage==='英研'){
+    data.本科学校=v('uk-school');data.本科GPA=v('uk-gpa');data.本科专业=v('uk-major');data.雅思=v('uk-ielts');data.是否对口=gpv('g-ukrel');data.工作经验=gpv('g-ukwk');
+  }else if(stage==='港研'){
+    data.学校=v('hk-school');data.GPA=v('hk-gpa');data.专业=v('hk-major');data.英语成绩=v('hk-eng');
+  }else{
+    data.当前状态=v('tbd-status');data.感兴趣方向=v('tbd-interest');
+  }
+
+  console.log('提交数据:',JSON.stringify(data,null,2));
+  // TODO: 接 Make Webhook 时取消注释并替换 URL
+  // fetch('YOUR_MAKE_WEBHOOK_URL',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+
+  document.querySelectorAll('.step').forEach(function(s){s.style.display='none';});
+  document.querySelector('.pb').style.display='none';
+  document.querySelector('.fh').style.display='none';
+  document.getElementById('success').classList.add('visible');
+}
+</script>
+
+
+</body></html>
